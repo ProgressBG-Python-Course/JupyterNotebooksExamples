@@ -1,0 +1,13 @@
+node_modules/
+**/node_modules/
+.sass-cache
+
+
+# all hidden files, except .gitignore
+.*
+!/.gitignore
+___*
+
+# virtenv:
+.venv
+Pipfile.lock
