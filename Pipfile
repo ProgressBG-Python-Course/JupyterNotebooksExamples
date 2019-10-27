@@ -10,6 +10,9 @@ pandas = "*"
 matplotlib = "*"
 jupyterlab = "*"
 seaborn = "*"
+jupyter-contrib-nbextensions = "*"
+jupyter-nbextensions-configurator = "*"
+jupyter = "*"
 
 [requires]
 python_version = "3.7"
