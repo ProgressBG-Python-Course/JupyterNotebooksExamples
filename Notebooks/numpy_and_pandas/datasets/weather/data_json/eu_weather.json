@@ -1,5 +1,0 @@
-{
-  "town": ["Atina", "Oslo", "London"],
-  "temp":[35,21,25],
-  "rain": [false, false, true ]
-}

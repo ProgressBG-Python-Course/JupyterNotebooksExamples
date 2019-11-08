@@ -14,6 +14,7 @@ jupyter-contrib-nbextensions = "*"
 jupyter-nbextensions-configurator = "*"
 jupyter = "*"
 bpython = "*"
+xlrd = "*"
 
 [requires]
 python_version = "3.7"
