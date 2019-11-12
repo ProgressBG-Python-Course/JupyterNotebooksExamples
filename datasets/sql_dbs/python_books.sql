@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS TestDB 
+
+CREATE USER'test'@'localhost' IDENTIFIED BY 'test1234';
+
+GRANT ALL PRIVILEGES ON TestDB.* TO 'test'@'localhost';
+
+USE TestDB;
+
+CREATE TABLE IF NOT EXISTS python_books(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	author VARCHAR(255),
+	authorUrl VARCHAR(255)
+)

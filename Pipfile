@@ -17,6 +17,8 @@ bpython = "*"
 xlrd = "*"
 scikit-learn = "*"
 mlxtend = "*"
+sqlalchemy = "*"
+pymysql = "*"
 
 [requires]
 python_version = "3.7"
