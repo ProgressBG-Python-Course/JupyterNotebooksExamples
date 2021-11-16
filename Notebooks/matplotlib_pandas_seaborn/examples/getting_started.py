@@ -36,10 +36,9 @@ def simple_plot():
 
 # +
 # if we want to see the plot (outside of the interactive environment), we must:
-#   plt.show()
+  plt.show()
 # -
 
-simple_plot()
 
 def multiple_subplots():
   x = np.array([1,2,3,4])
@@ -84,7 +83,6 @@ def add_subplots():
 
   plt.show()
 
-
 def axes_labels():
   fig, axes = plt.subplots()
   fig.set_facecolor("#B15A5A")
@@ -96,7 +94,6 @@ def axes_labels():
   axes.yaxis.set_label_coords(0, 1.05)
 
   plt.show()
-
 
 def task_simple_plot():
   x = np.array([4, 9, 25])
@@ -116,3 +113,5 @@ def task_simple_plot():
 
   plt.show()
 
+
+simple_plot()
