@@ -14,3 +14,5 @@ Pipfile.lock
 
 # jupyter
 **/.ipynb_checkpoints
+
+**/*.csv
