@@ -23,7 +23,7 @@ class LinearRegressionGD(BaseEstimator, RegressorMixin):
         return X_b.dot(self.theta_)
 
 # Load the data
-file_path = '/mnt/data/Salary_Data.csv'
+file_path = './Salary_Data.csv'
 data = pd.read_csv(file_path)
 
 X = data[['YearsExperience']].values
