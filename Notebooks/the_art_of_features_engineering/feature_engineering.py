@@ -40,10 +40,10 @@ def plotDistribution(data1, data2):
 
 	# print(data1['data'])
 
-	sns.distplot(data1['data'], ax=ax[0], color='y')
+	sns.histplot(data1['data'], ax=ax[0], color='y')
 	ax[0].set_title(data1['title'])
 
-	sns.distplot(data2['data'], ax=ax[1])
+	sns.histplot(data2['data'], ax=ax[1])
 	ax[1].set_title(data2['title'])
 	plt.show()
 
