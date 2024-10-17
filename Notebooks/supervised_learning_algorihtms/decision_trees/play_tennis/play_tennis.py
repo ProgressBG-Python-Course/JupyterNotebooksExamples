@@ -213,36 +213,36 @@ def print_tree(node, counter = 0):
     return counter
 
 
-# def classify(node, example):
-#     debug("example", example)
+def classify(node, example):
+    debug("example", example)
 
-#     if len(node.children) == 0:
-#         print("Branch: {}".format(node.branch_name))
+    if len(node.children) == 0:
+        print("Branch: {}".format(node.branch_name))
 
 
-#         node.data = np.unique(node.data)
-#         print("\tValues:", node.data)
-#         print("\tTerminal Node", "\n")
+        node.data = np.unique(node.data)
+        print("\tValues:", node.data)
+        print("\tTerminal Node", "\n")
 
-#         answer = node.data
-#         return answer
+        answer = node.data
+        return answer
 
-#     if(node.branch_name != ''):
-#         print("Branch: ", node.branch_name)
-#         classify(node.children)
+    if(node.branch_name != ''):
+        print("Branch: ", node.branch_name)
+        classify(node.children)
 
-#     else:
-#         classify(node.children[0], example)
-#         debug("@@@@@", node.children[0])
-#         # for attr, value in node.__dict__.items():
-#         #     print(attr, value)
+    else:
+        classify(node.children[0], example)
+        debug("@@@@@", node.children[0])
+        # for attr, value in node.__dict__.items():
+        #     print(attr, value)
 
-#     if(node.title != ''):
-#         example = example[,:]
-#         node = node.children[0]
-#         classify(node, example)
-#         debug("node.title",node.title)
-#         debug("example[0,0]",example[1:][:])
+    if(node.title != ''):
+        example = example[,:]
+        node = node.children[0]
+        classify(node, example)
+        debug("node.title",node.title)
+        debug("example[0,0]",example[1:][:])
 
 # + {"code_folding": [0]}
 def prepare_data(data_path):
@@ -263,7 +263,7 @@ def prepare_data(data_path):
 
 # + {"code_folding": [0]}
 def main():
-    data_path = "../../datasets/play_tennis_demo.csv"
+    data_path = "../../../../datasets/PlayTennis/play_tennis_demo.csv"
     (data,decisions,titles) = prepare_data(data_path)
 
     print(data[0])
@@ -275,18 +275,18 @@ def main():
     print(titles[1],ent_1)
     print(titles[2],ent_2)
 
-    # print('gain_longer: ', gain_longer(decisions,data[0]))
-    # print('gain shortest: ', gain(decisions,data[0]))
+    print('gain_longer: ', gain_longer(decisions,data[0]))
+    print('gain shortest: ', gain(decisions,data[0]))
 
-    # root = create_tree(data, decisions, titles)
-    # node_counter = print_tree(root)
-    # print('Total number of nodes:', node_counter)
+    root = create_tree(data, decisions, titles)
+    node_counter = print_tree(root)
+    print('Total number of nodes:', node_counter)
 
-    # print(type(root))
+    print(type(root))
 
     # classify:
-    # example = [titles,data[:,0]]
-    # classify(root, example)
+    example = [titles,data[:,0]]
+    classify(root, example)
 
 
 # + {"code_folding": [0]}
